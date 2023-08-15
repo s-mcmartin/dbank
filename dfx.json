@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "dfx": "0.9.3",
+  "canisters": {
+    "d_bank": {
+      "type": "motoko",
+      "main": "src/d_bank/main.mo"
+    },
+    "d_bank_assets": {
+      "type": "assets",
+      "source": [
+        "src/d_bank_assets/assets",
+        "dist/d_bank_assets/"
+      ],
+      "dependencies": [
+        "d_bank"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
